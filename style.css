@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+    width: 25vw;
+    height: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(7, 7, 8);
+    font-size: 1vw;
+
+}
+
+.container{
+    display: inline-block;
+    position: relative;
+    padding-left: 1.8vw;
+    margin-bottom: 0.625vw;
+    cursor: pointer;
+    font-size: 1.15vw;
+    user-select: none;
+    margin-left: 3vw;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.31vw;
+    width: 1.31vw;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    top: 0.45vw;
+	left: 0.46vw;
+	width: 0.417vw;
+	height: 0.417vw;
+	border-radius: 50%;
+	background: white;
+    display: none;
+   
+}
+.container input:checked ~ .checkmark::after {
+    display: block;
+}
+h1{
+    text-align: center;
+}
+#nomex {
+    width: 17vw;
+}
+#email {
+    width: 17vw;
+}
+.radios input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+}
+h2 {
+    margin: 2vw 0 2vw 0;
+}
+button {
+    width: 4vw;
+    margin: 1vw;
+    cursor: pointer;
+}
+@media (max-width:1023px){
+    form {
+        width: 70vw;
+        height: 70vw;
+        font-size: 3.1vw;
+    }
+    .container {
+        font-size: 4vw;
+        margin-left: 11vw;
+        padding-left: 6vw;
+    }
+    .checkmark {
+        width: 5vw;
+        height: 5vw;
+        padding: 0;
+        top: 0;
+        
+    }
+    #nomex {
+        width: 37vw;
+        height: 4vw;
+    }
+    #email {
+        width: 37vw;
+        height: 4vw;
+    }
+    button {
+        width: 14vw;
+        height: 6vw;
+        font-size: 3vw;
+    }
+    .checkmark::after {
+        width: 2vw;
+        height: 2vw;
+        top: 1.3vw;
+        left: 1.4vw;
+    }
+}
